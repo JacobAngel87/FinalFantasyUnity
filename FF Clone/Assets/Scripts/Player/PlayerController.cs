@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public Animator transition;
 
+    private static Vector3 spawnPoint;
+    private static bool newArea;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(newArea)
+        {
+            transform.position = spawnPoint;
+            newArea = false;
+        }
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
@@ -113,34 +121,17 @@ public class PlayerController : MonoBehaviour
         {
             // Get Entry Point info somehow
             GameObject currentTile = Physics2D.OverlapCircle(transform.position, 0.2f, entryPointsLayer).gameObject;
-            string name = currentTile.name.Substring(0, 4);
-            print(name);
-            switch (name)
-            {
-                case "Town":
-                    LoadNextScene(1);
-                    break;
-                case "Cast":
-                    break;
-                case "Cav1":
-                    break;
-                case "Over":
-                    LoadNextScene(0);
-                    break;
-            }
+            if (currentTile.GetComponent<EntryPoint>() == null) return;
+            StartCoroutine(LoadScene(currentTile));
         }
-
     }
-    private void LoadNextScene(int index)
-    {
-        StartCoroutine(LoadScene(index));
-    }
-    IEnumerator LoadScene(int index)
+    IEnumerator LoadScene(GameObject tile)
     {
         isMoving = true;
         transition.SetTrigger("Start");
         animator.enabled = false;
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(index);
+        newArea = true;
+        spawnPoint = tile.GetComponent<EntryPoint>().StartNextScene();
     }
 }

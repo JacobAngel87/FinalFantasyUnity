@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 103618059}
   - component: {fileID: 103618060}
   - component: {fileID: 103618061}
+  - component: {fileID: 103618062}
   m_Layer: 10
   m_Name: Town (5)
   m_TagString: Untagged
@@ -233,6 +234,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &103618062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103618058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fdf6eee26cc1049bf289e608175bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
+  spawnX: 0.5
+  spawnY: 0.5
 --- !u!4 &128709985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1248132035974158866, guid: 52d79d401df49964984ef6b250c16733,
@@ -582,6 +598,7 @@ GameObject:
   - component: {fileID: 546757757}
   - component: {fileID: 546757758}
   - component: {fileID: 546757759}
+  - component: {fileID: 546757760}
   m_Layer: 10
   m_Name: Town (2)
   m_TagString: Untagged
@@ -680,6 +697,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &546757760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546757756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fdf6eee26cc1049bf289e608175bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
+  spawnX: 0.5
+  spawnY: 0.5
 --- !u!1 &583033531
 GameObject:
   m_ObjectHideFlags: 0
@@ -80232,6 +80264,7 @@ GameObject:
   - component: {fileID: 1356288883}
   - component: {fileID: 1356288884}
   - component: {fileID: 1356288885}
+  - component: {fileID: 1356288886}
   m_Layer: 10
   m_Name: Town (1)
   m_TagString: Untagged
@@ -80330,6 +80363,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1356288886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356288882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fdf6eee26cc1049bf289e608175bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
+  spawnX: 0.5
+  spawnY: 0.5
 --- !u!1 &1683402870
 GameObject:
   m_ObjectHideFlags: 0
@@ -80670,6 +80718,7 @@ GameObject:
   - component: {fileID: 1902781251}
   - component: {fileID: 1902781252}
   - component: {fileID: 1902781253}
+  - component: {fileID: 1902781254}
   m_Layer: 10
   m_Name: Town (4)
   m_TagString: Untagged
@@ -80768,6 +80817,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1902781254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902781250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fdf6eee26cc1049bf289e608175bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
+  spawnX: 0.5
+  spawnY: 0.5
 --- !u!1 &1925092609
 GameObject:
   m_ObjectHideFlags: 0
@@ -80779,6 +80843,7 @@ GameObject:
   - component: {fileID: 1925092610}
   - component: {fileID: 1925092611}
   - component: {fileID: 1925092612}
+  - component: {fileID: 1925092613}
   m_Layer: 10
   m_Name: Town
   m_TagString: Untagged
@@ -80877,6 +80942,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1925092613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925092609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fdf6eee26cc1049bf289e608175bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
+  spawnX: 0.5
+  spawnY: 0.5
 --- !u!1 &1987458253
 GameObject:
   m_ObjectHideFlags: 0
@@ -80888,6 +80968,7 @@ GameObject:
   - component: {fileID: 1987458254}
   - component: {fileID: 1987458255}
   - component: {fileID: 1987458256}
+  - component: {fileID: 1987458257}
   m_Layer: 10
   m_Name: Town (3)
   m_TagString: Untagged
@@ -80986,6 +81067,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1987458257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987458253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fdf6eee26cc1049bf289e608175bc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
+  spawnX: 0.5
+  spawnY: 0.5
 --- !u!1001 &1248132035934793587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81221,6 +81317,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9110230555294486013, guid: 38653a06b27461f49a4cae68aa169772,
+        type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 63cf0ada4ef4d5a40bfe83d0033d4f00, type: 3}
     - target: {fileID: 9110230555294486014, guid: 38653a06b27461f49a4cae68aa169772,
         type: 3}
       propertyPath: m_RootOrder
