@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask solidObjectsLayer;
     public LayerMask encountersLayer;
+    public LayerMask entryPointsLayer;
 
     private Vector2 input;
     private Animator animator;
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
         }
         transform.position = targetPos;
         isMoving = false;
+        CheckForEntryPoint();
         CheckForEncounter();
     }
     public void Flip()
@@ -97,6 +99,16 @@ public class PlayerController : MonoBehaviour
             {
                 print("Random Encounter has started!");
             }
+        }
+    }
+    private void CheckForEntryPoint()
+    {
+        if(Physics2D.OverlapCircle(transform.position, 0.2f, entryPointsLayer) != null)
+        {
+            // Get Entry Point info somehow
+            GameObject currentTile = Physics2D.OverlapCircle(transform.position, 0.2f, entryPointsLayer).gameObject;
+            string name = currentTile.name.Substring(0, 4);
+            
         }
     }
 }
