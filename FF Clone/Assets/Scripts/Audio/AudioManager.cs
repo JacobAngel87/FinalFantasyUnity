@@ -42,6 +42,6 @@ public class AudioManager : MonoBehaviour
     }
     public void Start()
     {
-        FindObjectOfType<AudioManager>().Play("overworl");
+        FindObjectOfType<AudioManager>().Play("overworld");
     }
 }

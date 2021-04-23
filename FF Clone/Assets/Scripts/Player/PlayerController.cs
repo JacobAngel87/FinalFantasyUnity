@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 input;
     private Animator animator;
+    public Animator transition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -111,18 +114,33 @@ public class PlayerController : MonoBehaviour
             // Get Entry Point info somehow
             GameObject currentTile = Physics2D.OverlapCircle(transform.position, 0.2f, entryPointsLayer).gameObject;
             string name = currentTile.name.Substring(0, 4);
+            print(name);
             switch (name)
             {
                 case "Town":
+                    LoadNextScene(1);
                     break;
                 case "Cast":
                     break;
                 case "Cav1":
                     break;
                 case "Over":
+                    LoadNextScene(0);
                     break;
             }
         }
 
+    }
+    private void LoadNextScene(int index)
+    {
+        StartCoroutine(LoadScene(index));
+    }
+    IEnumerator LoadScene(int index)
+    {
+        isMoving = true;
+        transition.SetTrigger("Start");
+        animator.enabled = false;
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(index);
     }
 }
