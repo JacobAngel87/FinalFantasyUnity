@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour
             transform.position = spawnPoint;
             newArea = false;
         }
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            FindObjectOfType<AudioManager>().Play("blip");
+        }
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
