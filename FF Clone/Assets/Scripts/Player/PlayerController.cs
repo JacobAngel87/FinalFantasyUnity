@@ -115,7 +115,8 @@ public class PlayerController : MonoBehaviour
         {
             if (Random.Range(1, 101) <= 10)
             {
-                print("Random Encounter has started!");
+                spawnPoint = transform.position;
+                StartCoroutine(LoadEncounter());
             }
         }
     }
@@ -137,5 +138,14 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         newArea = true;
         spawnPoint = tile.GetComponent<EntryPoint>().StartNextScene();
+    }
+    IEnumerator LoadEncounter()
+    {
+        isMoving = true;
+        transition.SetTrigger("Start");
+        animator.enabled = false;
+        yield return new WaitForSeconds(1f);
+        newArea = true;
+        SceneManager.LoadScene(2);
     }
 }
