@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private static Vector3 spawnPoint;
     private static bool newArea;
+    private static int currentArea;
 
     // Start is called before the first frame update
     void Start()
@@ -146,6 +147,11 @@ public class PlayerController : MonoBehaviour
         animator.enabled = false;
         yield return new WaitForSeconds(1f);
         newArea = true;
+        currentArea = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(2);
+    }
+    public int GetCurrentArea()
+    {
+        return currentArea;
     }
 }
